@@ -23,11 +23,16 @@ class bagofWords{
 		System.out.println(":::::::::::::::::::::::::");
 		System.out.println(":::Bag of Words Matrix:::");
 		System.out.println(":::::::::::::::::::::::::");
-			for(int y=0;y<i;y++){
-				int x=0;
-				System.out.println(output(s[x],s[y])+"\t"+output(s[x],s[y])+"\t"+output(s[x],s[y]));;
+		for(File d:files){
+			System.out.printf("\t%s",d.getName());
+		}
+		System.out.println("\n");
+			for(int x=0;x<i;x++){
+				System.out.printf("%s\t",files[x].getName());
+				for(int y=0;y<i;y++){
+					System.out.printf("|%.2f\t",output(s[x],s[y]));
+				}
 				System.out.println("\n");
-				x++;
 			}
 		}
 		catch(Exception e){

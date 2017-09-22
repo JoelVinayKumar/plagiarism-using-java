@@ -20,11 +20,16 @@ class fingerPrinting{
 		System.out.println("::::::::::::::::::::::::::::");
 		System.out.println(":::Finger Printing Matrix:::");
 		System.out.println("::::::::::::::::::::::::::::");
-		int x=0;
-			while(x<i){
-				// System.out.println(output(s[y],s[x])+" "+output(s[y],s[x])+" "+output(s[y],s[x]));
-				System.out.println(s[x]);
-				x++;
+			for(File d:files){
+				System.out.printf("\t%s",d.getName());
+			}
+			System.out.println("\n");
+			for(int x=0;x<i;x++){
+				System.out.printf("%s\t",files[x].getName());
+				for(int y=0;y<i;y++){
+					System.out.printf("|%.2f\t",output(s[x],s[y]));
+				}
+				System.out.println("\n");
 			}
 		}
 		catch(Exception e){

@@ -24,8 +24,16 @@ class stringMatch{
 		System.out.println(":::::::::::::::::::::::::");
 		System.out.println(":::String Match Matrix:::");
 		System.out.println(":::::::::::::::::::::::::");
-			for(int w=0;w<i;w++){
-				System.out.println(" "+output(s[0],s[w]));
+			for(File d:files){
+			System.out.printf("\t%s",d.getName());
+			}
+			System.out.println("\n");
+			for(int x=0;x<i;x++){
+				System.out.printf("%s\t",files[x].getName());
+				for(int y=0;y<i;y++){
+					System.out.printf("|%.2f\t",output(s[x],s[y]));
+				}
+				System.out.println("\n");
 			}
 		}
 		catch(Exception e){
